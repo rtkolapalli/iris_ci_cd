@@ -17,16 +17,32 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS
+# Custom CSS (flower background + readability tweaks)
 st.markdown("""
     <style>
+    .stApp {
+      background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
     .main {
         padding-top: 2rem;
+        background-color: rgba(255,255,255,0.72);
+        border-radius: 8px;
+        padding: 1rem;
     }
     .stMetric {
-        background-color: #f0f2f6;
+        background-color: rgba(240,242,246,0.88);
         padding: 1rem;
         border-radius: 0.5rem;
+    }
+    .stSidebar {
+        background: rgba(255,255,255,0.85);
+    }
+    /* Improve heading contrast */
+    .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stButton>button {
+        color: #1f2937;
     }
     </style>
 """, unsafe_allow_html=True)
